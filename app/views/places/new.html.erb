@@ -1,0 +1,13 @@
+<h1>New Place</h1>
+
+<form action="<%= places_path %>" method="post">
+  <p>
+    <label for="name_input">Name</label>
+    <input type="text" name="place[name]" id="name_input">
+  </p>
+
+  <div class="actions">
+    <button type="submit">Submit</button>
+    <a href="<%= places_path %>">Back to Places</a>
+  </div>
+</form>
