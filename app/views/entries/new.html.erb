@@ -1,0 +1,25 @@
+<h1>New Entry for <%= @place.name %></h1>
+
+<form action="<%= place_entries_path(@place) %>" method="post">
+  <p>
+    <label for="title_input">Title</label>
+    <input type="text" name="entry[title]" id="title_input">
+  </p>
+
+  <p>
+    <label for="description_input">Description</label>
+    <textarea name="entry[description]" id="description_input"></textarea>
+  </p>
+
+  <p>
+    <label for="posted_on_input">Posted On</label>
+    <input type="date" name="entry[posted_on]" id="posted_on_input">
+  </p>
+
+  <input type="hidden" name="entry[place_id]" value="<%= @place.id %>">
+
+  <div class="actions">
+    <button type="submit">Submit</button>
+    <a href="<%= place_entries_path(@place) %>">Back to Entries</a>
+  </div>
+</form>
